@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SoundWave Studios | Music Production & Performance</title>
+  <meta name="description" content="Professional session guitarist, pianist, songwriter, singer, and voice-over artist. Premium music production and ready-made tracks for YouTube, ads, and more." />
+  <style>
+    /* Reset & Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #0f0f15;
+      color: #e0e0e0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://source.unsplash.com/random/1920x1080/?studio,recording') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 20px;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      font-weight: 700;
+    }
+
+    p.lead {
+      font-size: 1.4rem;
+      max-width: 700px;
+      margin-bottom: 2rem;
+      color: #aaa;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #e91e63;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      text-transform: uppercase;
+      transition: 0.3s;
+      margin: 0 10px;
+      border: 2px solid #e91e63;
+    }
+
+    .btn:hover {
+      background: transparent;
+      color: #e91e63;
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #fff;
+      border: 2px solid #fff;
+    }
+
+    .btn-outline:hover {
+      background: #fff;
+      color: #0f0f15;
+    }
+
+    section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 2.5rem;
+      text-align: center;
+      margin-bottom: 50px;
+      color: #fff;
+    }
+
+    /* Services */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #1a1a2e;
+      padding: 30px;
+      border-radius: 12px;
+      text-align: center;
+      transition: 0.3s;
+      border: 1px solid #2a2a4a;
+    }
+
+    .service-card:hover {
+      transform: translateY(-10px);
+      background: #1e1e3a;
+      box-shadow: 0 10px 20px rgba(233, 30, 99, 0.1);
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      color: #e91e63;
+    }
+
+    /* Audio Samples */
+    .audio-sample {
+      margin-bottom: 30px;
+      background: #1a1a2e;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .audio-sample h4 {
+      margin-bottom: 10px;
+      color: #fff;
+    }
+
+    .audio-sample p {
+      font-size: 0.9rem;
+      color: #aaa;
+      margin-bottom: 10px;
+    }
+
+    /* About */
+    .about-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .about-img {
+      flex: 1;
+      min-width: 300px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    .about-img img {
+      width: 100%;
+      display: block;
+      filter: saturate(1.2) contrast(1.1);
+    }
+
+    .about-text {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    /* Testimonials */
+    .testimonial {
+      background: #1a1a2e;
+      padding: 25px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .testimonial::before {
+      content: """;
+      font-size: 5rem;
+      position: absolute;
+      top: -20px;
+      left: 10px;
+      color: rgba(233, 30, 99, 0.2);
+      font-family: serif;
+    }
+
+    /* Contact */
+    form {
+      display: grid;
+      gap: 15px;
+    }
+
+    input, textarea, button {
+      padding: 12px;
+      border: none;
+      border-radius: 8px;
+    }
+
+    input, textarea {
+      background: #1a1a2e;
+      color: #fff;
+      border: 1px solid #333;
+    }
+
+    textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    button {
+      background: #e91e63;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background: #c11852;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      background: #0a0a0f;
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    .social-icons {
+      margin-top: 20px;
+    }
+
+    .social-icons a {
+      color: #e91e63;
+      font-size: 1.5rem;
+      margin: 0 10px;
+      transition: 0.3s;
+    }
+
+    .social-icons a:hover {
+      color: #fff;
+      transform: scale(1.2);
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 2.5rem;
+      }
+
+      p.lead {
+        font-size: 1.1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header id="home">
+    <h1>SoundWave Studios</h1>
+    <p class="lead">Professional Session Guitarist, Pianist, Songwriter & Voice-Over Artist</p>
+    <a href="#contact" class="btn">Hire Me</a>
+    <a href="#portfolio" class="btn btn-outline">Listen Now</a>
+  </header>
+
+  <!-- Services -->
+  <section id="services">
+    <h2>My Services</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <div class="service-icon">🎸</div>
+        <h3>Session Guitarist</h3>
+        <p>Electric, acoustic, or bass — recorded with precision in any genre.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎹</div>
+        <h3>Session Pianist</h3>
+        <p>Live keys, synth pads, or melodic arrangements for your track.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">✍️</div>
+        <h3>Songwriter</h3>
+        <p>Custom lyrics and melodies — co-write or full ghostwriting.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎤</div>
+        <h3>Vocal Performances</h3>
+        <p>Lead and backing vocals — clean, dynamic, and expressive.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">🎧</div>
+        <h3>Ready-Made Tracks</h3>
+        <p>Royalty-free music for YouTube, ads, and films. Instant delivery.</p>
+      </div>
+      <div class="service-card">
+        <div class="service-icon">📖</div>
+        <h3>Voice-Over Artist</h3>
+        <p>Audiobooks, explainers, YouTube — clear and engaging narration.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Portfolio -->
+  <section id="portfolio">
+    <h2>Listen to My Work</h2>
+    <div class="audio-sample">
+      <h4>Acoustic Indie Pop – "Morning Light"</h4>
+      <p>Guitar & Vocals | Used in travel vlog (2024)</p>
+      <audio controls style="width:100%">
+        <source src="your-music-here/track1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="audio-sample">
+      <h4>Electronic Cinematic – "Urban Pulse"</h4>
+      <p>Ready-made track | YouTube ad background</p>
+      <audio controls style="width:100%">
+        <source src="your-music-here/track2.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+    <div class="audio-sample">
+      <h4>Voice-Over – "The Hidden Forest" (Audiobook Sample)</h4>
+      <p>Warm, narrative voice — 3rd person, nature theme</p>
+      <audio controls style="width:100%">
+        <source src="your-music-here/vo1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <div class="about-content">
+      <div class="about-img">
+        <img src="https://source.unsplash.com/random/600x600/?musician,artist" alt="Musician in studio">
+      </div>
+      <div class="about-text">
+        <p>Hi, I'm <strong>Alex Morgan</strong>, a multi-instrumentalist and producer based in Nashville. For over 8 years, I’ve helped artists, YouTubers, and agencies bring their creative visions to life with high-quality music performances and original tracks.</p>
+        <p>From soulful guitar solos to catchy songwriting and smooth voice-overs, I deliver professional results on time — every time. I record in my home studio with professional-grade gear to ensure crisp, studio-quality audio.</p>
+        <p>Genres: Pop, Rock, Indie, Electronic, Acoustic, Lo-fi, Jazz, Ambient</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials -->
+  <section id="testimonials">
+    <h2>What Clients Say</h2>
+    <div class="testimonial">
+      <p>"Alex delivered our commercial track in under 24 hours — sounded perfect. Great communication and talent!"</p>
+      <strong>– Sarah Kim, Travel YouTuber</strong>
+    </div>
+    <div class="testimonial">
+      <p>"The vocals transformed our song. She nailed the emotion we were going for. Will hire again!"</p>
+      <strong>– The Echo Trees, Indie Band</strong>
+    </div>
+    <div class="testimonial">
+      <p>"Outstanding voice-over work. Our audiobook sounds professional and engaging."</p>
+      <strong>– Mark T., Author</strong>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Get In Touch</h2>
+    <form action="#" method="post">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <select name="service" required>
+        <option value="">Select Service</option>
+        <option value="guitar">Session Guitar</option>
+        <option value="piano">Session Piano</option>
+        <option value="vocals">Vocals</option>
+        <option value="songwriting">Songwriting</option>
+        <option value="ready-made">Ready-Made Tracks</option>
+        <option value="voiceover">Voice-Over</option>
+      </select>
+      <textarea name="message" placeholder="Tell me about your project..."></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 SoundWave Studios. All Rights Reserved.</p>
+    <p>Recorded, Mixed & Mastered with Passion</p>
+    <div class="social-icons">
+      <a href="https://instagram.com" target="_blank">📱</a>
+      <a href="https://youtube.com" target="_blank">▶️</a>
+      <a href="https://linkedin.com" target="_blank">💼</a>
+      <a href="mailto:hello@soundwavestudios.com">✉️</a>
+    </div>
+  </footer>
+
+</body>
+</html>
